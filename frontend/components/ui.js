@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Check, Copy, Hourglass } from "lucide-react";
 
 export const Card = ({ className = "", children, ...rest }) => (
-  <div className={`glass rounded-2xl p-5 ${className}`} {...rest}>
+  <div className={`glass p-5 ${className}`} {...rest}>
     {children}
   </div>
 );
 
 export const Label = ({ children }) => (
-  <p className="mb-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-400">{children}</p>
+  <p className="mb-1.5 text-[13px] font-semibold tracking-wide text-slate-200">{children}</p>
 );
 
 const TONES = {

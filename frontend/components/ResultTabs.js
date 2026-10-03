@@ -71,7 +71,7 @@ function CopyBlock({ title, icon: Icon, text, subject }) {
 function Marketing({ m }) {
   return (
     <div className="space-y-3">
-      <Card className="border-indigo-400/20 bg-indigo-500/[0.07]">
+      <Card className="card-glow">
         <Label>Campaign idea</Label>
         <h3 className="text-lg font-semibold text-white">{m.campaign_idea.name}</h3>
         <p className="mt-1 text-sm leading-relaxed text-slate-300">{m.campaign_idea.concept}</p>
@@ -131,7 +131,7 @@ function Report({ r, b }) {
         <CopyBtn text={md} label="Copy report" />
         <button onClick={download} className="inline-flex items-center gap-1.5 rounded-lg border border-line bg-white/5 px-2.5 py-1 text-xs font-medium text-slate-300 hover:bg-white/10"><Download size={13} /> Download .md</button>
       </div>
-      <Card className="border-indigo-400/20 bg-gradient-to-br from-indigo-500/10 to-violet-500/5">
+      <Card className="card-glow">
         <Label>Executive summary</Label>
         <p className="text-[15px] leading-relaxed text-slate-100">{r.executive_summary}</p>
       </Card>
@@ -160,12 +160,12 @@ export default function ResultTabs({ outputs, agents, tab, setTab, b }) {
   const cur = TABS.find((t) => t.id === tab);
   return (
     <div>
-      <div className="glass mb-4 flex gap-1 overflow-x-auto rounded-2xl p-1.5">
+      <div className="glass mb-4 flex gap-1 overflow-x-auto !rounded-full p-1.5">
         {TABS.map((t) => {
           const ready = !!outputs[t.key];
           return (
             <button key={t.id} onClick={() => setTab(t.id)}
-              className={`flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-xl px-4 py-2 text-sm font-medium transition ${tab === t.id ? "bg-gradient-to-r from-indigo-500/30 to-violet-500/20 text-white shadow-[0_0_22px_rgba(255,30,77,0.25)] ring-1 ring-rose-500/30" : "text-slate-400 hover:text-slate-200"}`}>
+              className={`flex flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full px-4 py-2.5 text-sm font-semibold transition ${tab === t.id ? "pill-active text-white" : "text-slate-400 hover:text-slate-200"}`}>
               {t.label}
               {ready ? <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> : <Loader2 size={12} className="animate-spin opacity-40" />}
             </button>

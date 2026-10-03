@@ -88,7 +88,7 @@ export default function Home() {
     <div className="mx-auto max-w-[1500px] px-4 pb-16 sm:px-6">
       <header className="flex items-center justify-between py-5">
         <div className="flex items-center gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 shadow-[0_0_24px_rgba(255,30,77,0.55)] ring-1 ring-white/20">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-violet-500 shadow-[0_0_26px_rgba(224,32,138,0.6)] ring-1 ring-white/20">
             <BrainCircuit size={22} />
           </span>
           <div>

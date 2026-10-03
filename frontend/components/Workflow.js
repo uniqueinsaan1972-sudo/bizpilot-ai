@@ -9,10 +9,10 @@ export default function Workflow({ agents, now, runStart, runEnd, status, csv })
   const doneCount = AGENTS.filter((a) => agents[a.id]?.status === "done").length;
 
   return (
-    <Card>
+    <Card className="card-glow">
       <div className="mb-4 flex items-center justify-between">
         <div>
-          <h2 className="text-base font-semibold text-white">Agent workflow</h2>
+          <h2 className="text-xl font-bold text-white">Agent workflow</h2>
           <p className="text-xs text-slate-400">{doneCount} of {AGENTS.length} agents completed</p>
         </div>
         <div className="flex items-center gap-1.5 rounded-lg border border-line bg-slate-900/60 px-2.5 py-1.5 font-mono text-xs text-slate-300">
@@ -23,7 +23,7 @@ export default function Workflow({ agents, now, runStart, runEnd, status, csv })
       </div>
 
       <div className="mb-4 h-1 overflow-hidden rounded-full bg-white/10">
-        <div className="h-full rounded-full bg-gradient-to-r from-violet-600 to-indigo-500 shadow-[0_0_12px_rgba(255,30,77,0.7)] transition-all duration-700" style={{ width: `${(doneCount / AGENTS.length) * 100}%` }} />
+        <div className="h-full rounded-full bg-gradient-to-r from-violet-500 via-indigo-500 to-rose-500 shadow-[0_0_14px_rgba(224,32,138,0.8)] transition-all duration-700" style={{ width: `${(doneCount / AGENTS.length) * 100}%` }} />
       </div>
 
       {csv && (

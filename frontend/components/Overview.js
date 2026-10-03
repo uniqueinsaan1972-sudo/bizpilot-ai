@@ -8,9 +8,9 @@ function Stat({ icon: Icon, label, value, sub, tone = "text-white", accent = "te
     <Card className="fade-up">
       <div className="flex items-center justify-between">
         <Label>{label}</Label>
-        <Icon size={16} className={accent} />
+        <span className="flex h-9 w-9 items-center justify-center rounded-full border border-indigo-400/40 bg-indigo-500/10"><Icon size={16} className={accent} /></span>
       </div>
-      <p className={`font-display text-xl font-bold tracking-tight sm:text-2xl ${tone}`}>{value}</p>
+      <p className={`font-num text-2xl font-extrabold tracking-tight sm:text-[28px] ${tone}`}>{value}</p>
       {sub && <p className="mt-1 text-xs text-slate-400">{sub}</p>}
     </Card>
   );
@@ -42,12 +42,12 @@ export default function Overview({ b, a, csv }) {
         <div className="flex items-center justify-between"><Label>Business health</Label><HeartPulse size={16} className="text-rose-300" /></div>
         {a ? (
           <>
-            <p className="text-xl font-bold sm:text-2xl">{a.business_health} <span className="text-sm font-medium text-slate-400">{score}/100</span></p>
+            <p className="font-num text-2xl font-extrabold sm:text-[28px]">{a.business_health} <span className="text-sm font-medium text-slate-400">{score}/100</span></p>
             <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-white/10"><div className={`h-full rounded-full ${scoreColor}`} style={{ width: `${score}%` }} /></div>
           </>
         ) : <p className="text-xl font-bold text-slate-500">Analyzing...</p>}
       </Card>
-      <Card className="fade-up col-span-2 border-[rgba(255,30,77,0.4)] bg-[rgba(255,30,77,0.08)] xl:col-span-5">
+      <Card className="fade-up card-glow col-span-2 xl:col-span-5">
         <div className="flex items-start gap-3">
           <AlertTriangle size={18} className="mt-0.5 shrink-0 text-rose-300" />
           <div>
