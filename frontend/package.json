@@ -1,0 +1,23 @@
+{
+  "name": "bizpilot-frontend",
+  "version": "0.1.0",
+  "description": "BizPilot AI dashboard",
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000"
+  },
+  "dependencies": {
+    "lucide-react": "^1.51.0",
+    "next": "^15.5.27",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3"
+  },
+  "private": true
+}
