@@ -1,6 +1,10 @@
 # BizPilot AI
-Backend (FastAPI + Pandas + 5 agents) and frontend (Next.js dashboard).
+Next.js dashboard + FastAPI (5 agents) — one Vercel project.
 
-Backend:  cd backend  ->  py -m pip install -r requirements.txt  ->  py -m uvicorn app.main:app --reload --port 8000
-Frontend: cd frontend ->  npm install  ->  npm run dev   (http://localhost:3000)
-Put your key in backend/.env (see .env.example). Never upload .env to GitHub.
+Layout: app/ components/ lib/ public/ = frontend · api/index.py = Vercel entry · backend/ = FastAPI code.
+
+Local (2 terminals, open http://localhost:3000):
+  1) py -m pip install -r requirements.txt   then   npm run api      (FastAPI on :8000, key in backend/.env)
+  2) npm install   then   npm run dev
+
+Vercel env vars: LLM_PROVIDER=gemini, GEMINI_API_KEY, GEMINI_MODEL. Never upload .env.

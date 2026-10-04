@@ -33,7 +33,7 @@ async def read_csv(csv_file: UploadFile | None) -> bytes | None:
         return None
     data = await csv_file.read(config.MAX_CSV_BYTES + 1)
     if len(data) > config.MAX_CSV_BYTES:
-        raise HTTPException(413, detail={"message": "CSV is too large (max 5 MB)."})
+        raise HTTPException(413, detail={"message": "CSV is too large (max 4 MB)."})
     return data
 
 
